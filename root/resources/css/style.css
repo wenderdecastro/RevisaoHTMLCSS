@@ -13,6 +13,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    border: 1px dashed red;
 }
 
 body{
@@ -100,11 +101,19 @@ a{
     background-color: transparent;
 }
 
+.banner-img{
+    width: 33%;
+}
+
+.promotion-img{
+    width: 33%;
+}
+
 .banner-content{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 30rem;
+    height: 100%;
 }
 
 
@@ -174,16 +183,17 @@ main{
 .filters-container div{
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 20px;
     width: 22.5%;
     height: 60px;
     /* padding: 30px 35px; */
     border-right: 2px dashed #4E4B59
 }
 
-.filters-container div *{
-    /* padding: 10px 35px; */
+.filters-container div a{
+   font-size: 1.1rem;
 }
+
 .filters div img {
     width: 1rem;
     height: auto;
@@ -236,5 +246,112 @@ footer{
     justify-content: center;
     background: #FFDF00;
     padding: 1rem;
+
+}
+.hotel{
+    margin-top: 100px;
+    margin-bottom: 50px;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+}
+
+.hotel-picture{
+    width: 100%;
+    height: height / 3;
+    border-radius: 8px;
+}
+
+.hotel-content{
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.hotel-card{
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    height: 300px;
+    padding: 1rem;
+
+}
+
+.hotel-details{
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+
+}
+
+.hotel-title{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+@media (max-width: 720px) {
+
+    h1{
+        margin-top: 5%;
+        width: 100%;
+        text-align: center;
+    }
+    .text{
+        text-align: center;
+        width: 100%;
+        font-size: 1.2rem;
+        
+    }
+    .banner{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .banner-content{
+        flex-direction: column;
+        height: 50vh;
+        /* gap: 5%; */
+
+    }
+    .banner-img{
+        display: none;
+    }
+
+    .filters-container div{
+        display: none;
+    }
+    .banner-content > span{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 15%;
+        gap: 5%;
+        height: 100%;
+
+    }
+    .wrapper{
+        width: 80%;
+    }
+    .navigation {
+        display: none;
+    }
+    .promotion{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hotel{
+        margin-top: 0px;
+        grid-template-columns: 100%;
+    }
+    .title{
+        line-height: 3rem;
+    }
+
+    .promotion-img{
+        display: none;
+    }
 
 }
